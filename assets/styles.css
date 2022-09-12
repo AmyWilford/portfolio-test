@@ -6,14 +6,15 @@
 
 body {
     color: var(--blue);
-    /* font-family: 'Source Sans Pro', sans-serif */
+    font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
     padding: 0;
 }
+
 h1,
 h2,
 h3 {
-    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Poppins', sans-serif;
 }
 nav, 
 footer {
@@ -21,8 +22,14 @@ footer {
     color: white;
     display: flex;
     font-size: 18px;
-    padding: 20px;
+    padding: 20px 0px;
     width: 100%;
+}
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
 }
 /* Navigation Menu Styles */
 nav {
@@ -32,7 +39,7 @@ nav {
 }
 
 div>a {
-    margin: 30px;
+    margin: 10px 30px;
 }
 .active, 
 div>a {
@@ -48,23 +55,26 @@ div>a {
 h1 {
     animation-delay: .5s;
     letter-spacing: .08em;
-    font-size: 100px;
+    font-size: 2em;
+    font-weight: 100;
 }
 h2 {
     animation-delay: .7s;
-    font-size: 40px;
+    font-size: 1.25em;
+    font-weight: 400;
 }
 
 h3,
 h4 {
     text-transform: uppercase;
 }
-h3 {
-    /* font-weight: 600; */
-    font-size: 30px;
+h3,
+h4 {
+    font-weight: 600;
+    font-size: 1em;
 }
 h4 {
-    font-size: 20px;
+    font-weight: 400;
 }
 
 
@@ -73,12 +83,10 @@ h4 {
 
 section.banner {
     background-color: var(--green);
-    padding:100px 15px 150px 15px;
+    padding:200px 15px 75px 15px;
     text-align: center;
 }
-section {
-    padding: 15px;
-}
+
 
 .chevron-section {
     position: absolute;
@@ -144,6 +152,23 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 30px;
+}
+.highlighted-project{
+    width: 100%;
+    text-align: center;
+}
+.row-projects {
+    display:flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items:center;
+}
+.sub-project-card{
+    width: 40%;
+}
+.project-card {
 }
 /* Animations */
 .pop-in {

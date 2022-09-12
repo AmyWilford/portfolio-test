@@ -1,0 +1,11 @@
+:root {
+    --blue: #010224;
+    --white: #fff;
+    --green: #57F1B1;
+}
+
+body {
+    color: var(--blue);
+    /* font-family:  */
+    margin: 0px;
+}

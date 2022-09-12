@@ -7,8 +7,10 @@
 body {
     color: var(--blue);
     /* font-family:  */
-    margin: 0px;
+    margin: 0;
+    padding: 0;
 }
+/* Navigation Menu Styles */
 nav {
     background-color: var(--blue);
     color: white;
@@ -17,7 +19,7 @@ nav {
     width: 100%;
     justify-content: space-between;
     position: fixed;
-    /* z-index:2; */
+    z-index:2;
     font-size: 18px;
 }
 
@@ -34,3 +36,76 @@ div>a {
     color: var(--green);
     cursor: pointer;
 }
+
+/* Main Element Styles */
+/* Banner Animation Styles */
+/*  */
+
+section.banner {
+    background-color: var(--green);
+    padding:100px 15px 150px 15px;
+}
+.pop-in {
+    animation: pop-in .8s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+    opacity: 0;
+}
+.head-banner {
+    animation-delay: .5s;
+}
+.subheader {
+    animation-delay: .7s;
+}
+.chevron-section {
+    position: absolute;
+    left:0;
+    right:0;
+    text-align: center;
+    z-index:1;
+}
+.chevron {
+    padding-top: 60px;
+    width: 50px;
+    animation: fade-slide-up .5s 1s ease-out forwards,
+                pulse 2s 3s ease-out infinite;
+    opacity: 0;
+}
+.chevron:hover {
+    width: 58px;
+}
+
+
+/*keyframes*/
+@keyframes fade-slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(4em);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        transform: none;
+    }
+    50% {
+        opacity: .8;
+        transform: scale(.8);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+@keyframes pop-in {
+    0% {
+      opacity: 0;
+      transform: translateY(-4rem) scale(.8);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }

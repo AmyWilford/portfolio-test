@@ -6,21 +6,29 @@
 
 body {
     color: var(--blue);
-    /* font-family:  */
+    /* font-family: 'Source Sans Pro', sans-serif */
     margin: 0;
     padding: 0;
 }
-/* Navigation Menu Styles */
-nav {
+h1,
+h2,
+h3 {
+    /* font-family: 'Poppins', sans-serif; */
+}
+nav, 
+footer {
     background-color: var(--blue);
     color: white;
     display: flex;
+    font-size: 18px;
     padding: 20px;
     width: 100%;
+}
+/* Navigation Menu Styles */
+nav {
     justify-content: space-between;
     position: fixed;
     z-index:2;
-    font-size: 18px;
 }
 
 div>a {
@@ -37,24 +45,41 @@ div>a {
     cursor: pointer;
 }
 
+h1 {
+    animation-delay: .5s;
+    letter-spacing: .08em;
+    font-size: 100px;
+}
+h2 {
+    animation-delay: .7s;
+    font-size: 40px;
+}
+
+h3,
+h4 {
+    text-transform: uppercase;
+}
+h3 {
+    /* font-weight: 600; */
+    font-size: 30px;
+}
+h4 {
+    font-size: 20px;
+}
+
+
 /* Main Element Styles */
-/* Banner Animation Styles */
-/*  */
+/* Banner Section Styles*/
 
 section.banner {
     background-color: var(--green);
     padding:100px 15px 150px 15px;
+    text-align: center;
 }
-.pop-in {
-    animation: pop-in .8s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
-    opacity: 0;
+section {
+    padding: 15px;
 }
-.head-banner {
-    animation-delay: .5s;
-}
-.subheader {
-    animation-delay: .7s;
-}
+
 .chevron-section {
     position: absolute;
     left:0;
@@ -63,7 +88,7 @@ section.banner {
     z-index:1;
 }
 .chevron {
-    padding-top: 60px;
+    padding-top: 20px;
     width: 50px;
     animation: fade-slide-up .5s 1s ease-out forwards,
                 pulse 2s 3s ease-out infinite;
@@ -72,8 +97,67 @@ section.banner {
 .chevron:hover {
     width: 58px;
 }
+.card {
+    text-align: center;
+}
+.bio{
+    line-height: 2em;
+    margin: 80px 20px;
+}
+ul{
+    list-style-type: none;
+}
 
+.profile-picture {
+    width: 250px;
+}
+.mobile-profile-picture {
+    display: none;
+}
+.call-to-action {
+    text-align: center;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 20px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+}
+/* Button Styling */
+button{
+    border-radius: 10px;
+    background-color: var(--green);
+    padding: 15px;
+    letter-spacing: .10em;
+    min-width: 30%;
+}
+button:hover {
+    background-color: var(--blue);
+    color: var(--green);
+    border: 2px solid var(--green);
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
 
+/* Project Card Styling */
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Animations */
+.pop-in {
+    animation: pop-in .8s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+    opacity: 0;
+}
+/* footer styles */
+footer{
+     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
 /*keyframes*/
 @keyframes fade-slide-up {
     0% {

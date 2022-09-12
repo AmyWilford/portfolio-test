@@ -9,3 +9,28 @@ body {
     /* font-family:  */
     margin: 0px;
 }
+nav {
+    background-color: var(--blue);
+    color: white;
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    justify-content: space-between;
+    position: fixed;
+    /* z-index:2; */
+    font-size: 18px;
+}
+
+div>a {
+    margin: 30px;
+}
+.active, 
+div>a {
+    color: white;
+    text-decoration: none;
+}
+.active:hover,
+ div>a:hover {
+    color: var(--green);
+    cursor: pointer;
+}

@@ -46,10 +46,13 @@ div>a,
 .footer-nav{
     margin: 5px 20px;
 }
+a{
+    text-decoration: none;
+}
+
 .active, 
 div>a {
     color: white;
-    text-decoration: none;
 }
 .active:hover,
  div>a:hover {
@@ -218,6 +221,19 @@ h4 {
     border: none;
     color: var(--blue);
 }
+/* a:link{
+    color:var(--white);
+}
+a:visited{
+    color:(--blue);
+}
+a:focus,
+a:hover,
+a:active {
+    color:var(--white);
+
+} */
+
 .project-button:hover {
     background-color: var(--blue);
     color: var(--white);

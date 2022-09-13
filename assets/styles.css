@@ -167,17 +167,16 @@ button:hover {
     margin: 30px;
 }
 
-.highlighted-project{
-    width: 100%;
-    text-align: center;
-}
-.secondary-project-container{
+.project-card{
     position:relative;
     margin: var(--margin-bottom);
 }
+#highlight {
+    width: 20rem;
+}
 .project-image {
-    width:300px;
-    border-radius: 20px;
+    width:15rem;
+    border-radius: 15px;
 }
 .overlay {
     position: absolute;
@@ -189,14 +188,14 @@ button:hover {
     height: 100%;
     opacity: 0;
     transition: 0.5s ease;
-    background-color:#010224;
+    background-color:var(--blue);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center; 
 }
-.secondary-project-container:hover .overlay {
+.project-card:hover .overlay {
     opacity: .80;
     cursor: pointer;
 }
@@ -205,6 +204,7 @@ button:hover {
     flex-direction: column;
     color: white;
     position: absolute;
+    justify-content: space-between;
 
 }
 h4 {
@@ -225,7 +225,7 @@ h4 {
     transition: 0.3s ease-in;
     cursor: pointer;
 }
-/* .secondary-projects {
+.secondary-projects {
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -233,10 +233,7 @@ h4 {
     justify-content: center;
     align-items:center;
 }
-.project-card {
-    display:flex;
-    width: 40%;
-} */
+
 
 
 /* Animations */

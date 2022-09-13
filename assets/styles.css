@@ -14,7 +14,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-family: 'Poppins', sans-serif;
 }
 /* Navigation Menu Styles */
@@ -165,22 +166,79 @@ button:hover {
     align-items: center;
     margin: 30px;
 }
+
 .highlighted-project{
     width: 100%;
     text-align: center;
 }
-.row-projects {
+.secondary-project-container{
+    position:relative;
+    margin: var(--margin-bottom);
+}
+.project-image {
+    width:300px;
+    border-radius: 20px;
+}
+.overlay {
+    position: absolute;
+    border-radius: 15px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color:#010224;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+}
+.secondary-project-container:hover .overlay {
+    opacity: .80;
+    cursor: pointer;
+}
+.details {
     display:flex;
+    flex-direction: column;
+    color: white;
+    position: absolute;
+
+}
+h4 {
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: 1em; 
+    padding: 5px;
+}
+.project-button {
+    background-color: var(--white);
+    border: none;
+    color: var(--blue);
+}
+.project-button:hover {
+    background-color: var(--blue);
+    color: var(--white);
+    border:1px solid var(--white);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+/* .secondary-projects {
+    display:flex;
+    flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
     justify-content: center;
     align-items:center;
 }
-.sub-project-card{
-    width: 40%;
-}
 .project-card {
-}
+    display:flex;
+    width: 40%;
+} */
+
+
 /* Animations */
 .pop-in {
     animation: pop-in .8s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;

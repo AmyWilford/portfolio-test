@@ -8,11 +8,11 @@ CUSTOMIZED VALUES - selected the root element of the docuemt to be accessed thro
     --margin: 20px;
     --padding: 20px;
 }
+
 /* 
 GENERAL STYLES 
 applied throughout the body of the page to maintain consistency in look and feel
 */
-
 body {
     color: var(--blue);
     font-family: 'Source Sans Pro', sans-serif;
@@ -27,21 +27,19 @@ h3,
 h4 {
     font-family: 'Poppins', sans-serif;
 }
-
 h3,
 h4 {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1.25em;
 }
-
 h4 {
     font-weight: 400;
 }
-
 a{
     text-decoration: none;
 }
+
 /* Header and Footer Navigation Styles */
 nav, 
 footer {
@@ -74,7 +72,6 @@ div>a {
     color: var(--green);
     cursor: pointer;
 }
-
 /* Applies styles to right-side section links within navigation bar */
 nav {
     justify-content: space-between;
@@ -150,7 +147,6 @@ h2 {
     flex-direction: column;
     margin-bottom:var(--margin);
 }
-
 /* General Button styles*/
 button{
     border-radius: 10px;
@@ -162,7 +158,6 @@ button{
     margin: var(--margin);
     text-transform: uppercase;
     font-family: 'Source Sans Pro', sans-serif;
-
 }
 button:hover {
     background-color: var(--blue);
@@ -171,14 +166,12 @@ button:hover {
     cursor: pointer;
     transition: 0.3s ease-in;
 }
-
 /* Project Section Styles */
 #projects {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 /* Highlighted Project placed in its own row set to a larger size than secondary projects */
 #highlight {
     width: 20em;
@@ -241,22 +234,18 @@ Smaller in Size with flex display set to row and wrap*/
     font-size: 1em; 
     padding: 5px;
 }
-
 /* Applies to styles to buttons within each project card */
 .project-button {
     background-color: var(--white);
     border: none;
     color: var(--blue);
 }
-
 .project-button:hover {
     background-color: var(--blue);
     color: var(--white);
     border:1px solid var(--white);
     transition: 0.3s ease-in;
 }
-
-
 /* footer styles */
 .footer-nav{
     display: flex;

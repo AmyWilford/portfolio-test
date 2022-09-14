@@ -18,6 +18,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 /* Heading styles */
 h1,
 h2,
@@ -149,15 +150,18 @@ h2 {
     margin-bottom:var(--margin);
 }
 
-/* Button styles - will be applied to button within call-to-action banner */
+/* General Button styles*/
 button{
     border-radius: 10px;
     border: 2px solid var(--blue);
     background-color: var(--green);
     padding: 15px;
-    letter-spacing: .10em;
+    letter-spacing: .25em;
     min-width: 30%;
     margin: 20px;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+
 }
 button:hover {
     background-color: var(--blue);
@@ -176,7 +180,7 @@ button:hover {
 
 /* Highlighted Project placed in its own row set to a larger size than secondary projects */
 #highlight {
-    width: 20rem;
+    width: 20em;
 }
 .highlight-project{
     text-align: center;
@@ -198,7 +202,7 @@ Smaller in Size with flex display set to row and wrap*/
     margin: var(--margin);
 }
 .project-image {
-    width:15rem;
+    width:15em;
     border-radius: 15px;
 }
 .overlay {
@@ -260,6 +264,10 @@ Smaller in Size with flex display set to row and wrap*/
     align-items: center;
     width: 100%;
     justify-content: space-between;
+}
+.footer-nav>span {
+    font-weight: bolder;
+    letter-spacing: .25em;
 }
 /* 
 MEDIA QUERIES 

@@ -1,4 +1,5 @@
 # Module02-Challenge-Portfolio
+
 Amy Wilford Web Developer Portfolio
 
 ## Table of Contents
@@ -18,7 +19,7 @@ Amy Wilford Web Developer Portfolio
 
 This site has been created to showcase my growing talents as a webdeveloper. This repository holds the source code for my personal Web Development portfolio and includes links to deployed prior projects. See below for GitHub pages link to view the deployed site.
 
-***This repository has been created and completed as part of UofT's Bootcamp Module 02 Challenge.***
+**_This repository has been created and completed as part of UofT's Bootcamp Module 02 Challenge._**
 
 # User Story
 
@@ -59,11 +60,12 @@ Access this repository to view professional portfolio and links to past deployed
 
 ## Demo:
 
-View screenshot of deployed site: <img src="" alt="Visual of deployed site"/>
+View screenshot of deployed site: <img src="assets/images/PortfolioSite-Image-Sample.png" alt="Visual of deployed site"/>
 
 ## Deployment:
 
 - View this application in a web environment: [https://amywilford.github.io/Module02-Challenge-Portfolio/]
 
 ## Credits
+
 Designed and Coded by Amy Wilford

@@ -92,7 +92,7 @@ MAIN ELEMENT STYLES
 /* Banner Styles */
 section.banner {
     background-color: var(--green);
-    padding:175px 15px 125px 15px;
+    padding:200px 15px 150px 15px;
     text-align: center;
 }
 /* Hidden on mobile screen display - Media Queries will readjust for tablets and desktops */
@@ -117,7 +117,7 @@ h2 {
 }
 /* About Section Styles */
 #about {
-    padding: 50px;
+    padding: 40px;
 }
 
 .card {

@@ -1,9 +1,16 @@
+/* 
+CUSTOMIZED VALUES - selected the root element of the docuemt to be accessed throughout the page 
+*/
 :root {
     --blue: #010224;
     --white: #fff;
     --green: #57F1B1;
-    --margin-bottom: 20px;
+    --margin: 20px;
 }
+/* 
+GENERAL STYLES 
+applied throughout the body of the page to maintain consistency in look and feel
+*/
 
 body {
     color: var(--blue);
@@ -11,15 +18,29 @@ body {
     margin: 0;
     padding: 0;
 }
-
+/* Heading styles */
 h1,
 h2,
 h3,
 h4 {
     font-family: 'Poppins', sans-serif;
 }
-/* Navigation Menu Styles */
 
+h3,
+h4 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.25em;
+}
+
+h4 {
+    font-weight: 400;
+}
+
+a{
+    text-decoration: none;
+}
+/* Header and Footer Navigation Styles */
 nav, 
 footer {
     background-color: var(--blue);
@@ -29,7 +50,30 @@ footer {
     padding: 20px 0px;
     width: 100%;
 }
+nav>a,
+div>a,
+.footer-nav{
+    margin: 5px 20px;
+}
 
+/* NOTE: Initial page styles utilize a mobile-first layout */
+
+/* 
+HEADER NAVIGATION STYLES
+*/
+
+/* Applies styles to top-left logo */
+.active, 
+div>a {
+    color: white;
+}
+.active:hover,
+ div>a:hover {
+    color: var(--green);
+    cursor: pointer;
+}
+
+/* Applies styles to right-side section links within navigation bar */
 nav {
     justify-content: space-between;
     position: fixed;
@@ -41,25 +85,20 @@ nav {
     align-items: flex-end;
 }
 
-nav>a,
-div>a,
-.footer-nav{
-    margin: 5px 20px;
+/* 
+MAIN ELEMENT STYLES 
+*/
+/* Banner Styles */
+section.banner {
+    background-color: var(--green);
+    padding:175px 15px 125px 15px;
+    text-align: center;
 }
-a{
-    text-decoration: none;
+/* Hidden on mobile screen display - Media Queries will readjust for tablets and desktops */
+.chevron-section{
+    display:none;
 }
-
-.active, 
-div>a {
-    color: white;
-}
-.active:hover,
- div>a:hover {
-    color: var(--green);
-    cursor: pointer;
-}
-
+/* Main Banner Animations */
 h1 {
     animation-delay: .5s;
     letter-spacing: .08em;
@@ -71,32 +110,15 @@ h2 {
     font-size: 2em;
     font-weight: 400;
 }
-
-h3,
-h4 {
-    text-transform: uppercase;
+.pop-in {
+    animation: pop-in .8s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+    opacity: 0;
 }
-h3,
-h4 {
-    font-weight: 600;
-    font-size: 1.25em;
-}
-h4 {
-    font-weight: 400;
+/* About Section Styles */
+#about {
+    padding: 50px;
 }
 
-
-/* Main Element Styles */
-/* Banner Section Styles*/
-
-section.banner {
-    background-color: var(--green);
-    padding:175px 15px 125px 15px;
-    text-align: center;
-}
-.chevron-section{
-    display:none;
-}
 .card {
     text-align: center;
     line-height: 1.25em;
@@ -110,10 +132,12 @@ section.banner {
 .profile-picture {
     width: 250px;
 }
+/* Hidden on mobile screen display - Media Queries will readjust for tablets and desktops */
 .mobile-profile-picture {
     display: none;
 }
 
+/* Call to action banner styles */
 .call-to-action {
     text-align: center;
     background-color: var(--blue);
@@ -122,12 +146,10 @@ section.banner {
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
-    margin-bottom:var(--margin-bottom);
+    margin-bottom:var(--margin);
 }
-#about {
-    padding: 50px;
-}
-/* Button Styling */
+
+/* Button styles - will be applied to button within call-to-action banner */
 button{
     border-radius: 10px;
     border: 2px solid var(--blue);
@@ -145,19 +167,35 @@ button:hover {
     transition: 0.3s ease-in;
 }
 
-/* Project Card Styling */
+/* Project Section Styles */
 #projects {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.project-card{
-    position:relative;
-    margin: var(--margin-bottom);
-}
+/* Highlighted Project placed in its own row set to a larger size than secondary projects */
 #highlight {
     width: 20rem;
+}
+.highlight-project{
+    text-align: center;
+}
+/* Applies styles to section of secondary-projects listed in flex-row underneath highlighted image.
+Smaller in Size with flex display set to row and wrap*/
+.secondary-projects {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items:center;
+}
+/* Styles for all project cards (highlighted and secondary)
+ Sets position and styling for overlay on each individual project section */
+.project-card{
+    position:relative;
+    margin: var(--margin);
 }
 .project-image {
     width:15rem;
@@ -182,57 +220,39 @@ button:hover {
 }
 .project-card:hover .overlay {
     opacity: .80;
-    cursor: pointer;
 }
+/* Applies styles to content (text and button) within each project card */
 .details {
     display:flex;
     flex-direction: column;
     color: white;
     position: absolute;
     justify-content: space-between;
-
 }
-h4 {
+/* Applies to project title of each project card */
+.details h4 {
     text-transform: uppercase;
     letter-spacing: 0.25em;
     font-size: 1em; 
     padding: 5px;
 }
+
+/* Applies to styles to buttons within each project card */
 .project-button {
     background-color: var(--white);
     border: none;
     color: var(--blue);
 }
 
-.highlight-project{
-    text-align: center;
-}
 .project-button:hover {
     background-color: var(--blue);
     color: var(--white);
     border:1px solid var(--white);
     transition: 0.3s ease-in;
-    cursor: pointer;
-}
-
-.secondary-projects {
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
-    align-items:center;
 }
 
 
-
-/* Animations */
-.pop-in {
-    animation: pop-in .8s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
-    opacity: 0;
-}
 /* footer styles */
-
 .footer-nav{
     display: flex;
     flex-direction: row;
@@ -240,10 +260,93 @@ h4 {
     align-items: center;
     width: 100%;
     justify-content: space-between;
+}
+/* 
+MEDIA QUERIES 
+*/
 
+/* Reformats footer navigation bar for responsive layout for smaller mobile devices (maximum screen width of 400px)
+Adjusts navigation links to flex-column.  */
+@media only screen and (max-width: 400px) {
+    .footer-nav{
+        justify-content: space-between;
+        width: 100%;
+    }
+    .footer-nav > div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+/*Reformats page content for tablets and desktops (minimum screen width: 768px) */
+@media only screen and (min-width: 768px) {
+    /* Adjusts header navigation links to flex display, row */
+    .links {
+        display: flex;
+        flex-direction: row;
+    }
+    /* Adjusts banner text size as screen size grows */
+    h1 {
+        font-size: 4.5em;
+    }
+    h2 {
+        font-size: 2.75em;
+    }
+    /* Adjusts About <section> to flex - bio <div> and <aside> skills will appear side-by-side*/
+    #about {
+        display:flex;
+        align-items: initial;
+        justify-content: space-evenly;
+    }
+    .bio {
+        width: 60%;
+    }
+    .skills {
+        width: 35%;
+        border: solid 2px var(--blue);
+        margin-bottom: var(--margin);
+    }
+    /* Chevron-Section hidden in initial mobile layout appears onscreen with display block
+    Animated Down arrow directing user to about section and call-to-action banner */
+    .chevron-section {
+        display: block;
+        position: absolute;
+        left:0;
+        right:0;
+        text-align: center;
+        z-index:1;
+    }
+    .chevron {
+        padding-top: 20px;
+        width: 50px;
+        animation: fade-slide-up .5s 1s ease-out forwards,
+                    pulse 2s 3s ease-out infinite;
+        opacity: 0;
+    }
+    .chevron:hover {
+        width: 58px;
+    }
+    /* Profile picture viewed in about section in mobile version is hidden  */
+    .profile-picture{
+        display:none;
+    }
+    /* Adjusts layout of call-to-action banner to flex column */
+    .call-to-action {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+    /* Profile picture set to appear in call-to-action banner - will be presented stacked with other banner content*/
+    .mobile-profile-picture {
+        display: block;
+        width: 250px;
+    }
 }
 
-/*keyframes*/
+/* 
+ANIMATION KEYFRAMES
+*/
 @keyframes fade-slide-up {
     0% {
         opacity: 0;
@@ -278,80 +381,3 @@ h4 {
       transform: none;
     }
   }
-
-  @media only screen and (min-width: 768px) {
-    .links {
-        display: flex;
-        flex-direction: row;
-    }
-    h1 {
-        font-size: 4.5em;
-    }
-    h2 {
-        font-size: 2.75em;
-    }
-    #about {
-        display:flex;
-        align-items: initial;
-        justify-content: space-evenly;
-    }
-    .bio {
-        width: 60%;
-    }
-    .skills {
-        width: 30%;
-        border: solid 2px var(--blue);
-        margin-bottom: var(--margin-bottom);
-    }
-    .chevron-section {
-        display: block;
-        position: absolute;
-        left:0;
-        right:0;
-        text-align: center;
-        z-index:1;
-    }
-    .chevron {
-        padding-top: 20px;
-        width: 50px;
-        animation: fade-slide-up .5s 1s ease-out forwards,
-                    pulse 2s 3s ease-out infinite;
-        opacity: 0;
-    }
-    .chevron:hover {
-        width: 58px;
-    }
-    .profile-picture{
-        display:none;
-    }
-    .call-to-action {
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        align-items: center;
-    }
-   
-    .mobile-profile-picture {
-        display: block;
-        width: 250px;
-    }
-    .button {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-
-}
-@media only screen and (max-width: 400px) {
-    .footer-nav{
-        justify-content: space-between;
-        width: 100%;
-    }
-    .footer-nav > div {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-}

@@ -56,7 +56,7 @@ Here are the critical requirements necessary to develop a portfolio that satisfi
 
 ## Usage:
 
-Access this repository to view professional portfolio and links to past deployed projects.
+Access this repository to view professional portfolio and links to past deployed projects. Hover on project boxes for titles and site-visit button.
 
 ## Demo:
 

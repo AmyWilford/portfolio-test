@@ -6,6 +6,7 @@ CUSTOMIZED VALUES - selected the root element of the docuemt to be accessed thro
     --white: #fff;
     --green: #57F1B1;
     --margin: 20px;
+    --padding: 20px;
 }
 /* 
 GENERAL STYLES 
@@ -48,13 +49,13 @@ footer {
     color: white;
     display: flex;
     font-size: 1em;
-    padding: 20px 0px;
+    padding: var(--padding) 0px;
     width: 100%;
 }
 nav>a,
 div>a,
 .footer-nav{
-    margin: 5px 20px;
+    margin: 10px var(--margin);
 }
 
 /* NOTE: Initial page styles utilize a mobile-first layout */
@@ -90,9 +91,9 @@ nav {
 MAIN ELEMENT STYLES 
 */
 /* Banner Styles */
-section.banner {
+.banner {
     background-color: var(--green);
-    padding:200px 15px 150px 15px;
+    padding:225px 15px 150px 15px;
     text-align: center;
 }
 /* Hidden on mobile screen display - Media Queries will readjust for tablets and desktops */
@@ -117,7 +118,7 @@ h2 {
 }
 /* About Section Styles */
 #about {
-    padding: 40px;
+    padding: 30px;
 }
 
 .card {
@@ -143,7 +144,7 @@ h2 {
     text-align: center;
     background-color: var(--blue);
     color: var(--white);
-    padding: 20px;
+    padding: var(--padding);
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
@@ -158,7 +159,7 @@ button{
     padding: 15px;
     letter-spacing: .25em;
     min-width: 30%;
-    margin: 20px;
+    margin: var(--margin);
     text-transform: uppercase;
     font-family: 'Source Sans Pro', sans-serif;
 
@@ -325,7 +326,7 @@ Adjusts navigation links to flex-column.  */
         z-index:1;
     }
     .chevron {
-        padding-top: 20px;
+        padding:var(--padding);
         width: 50px;
         animation: fade-slide-up .5s 1s ease-out forwards,
                     pulse 2s 3s ease-out infinite;

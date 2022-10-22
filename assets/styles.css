@@ -196,7 +196,7 @@ Smaller in Size with flex display set to row and wrap*/
     margin: var(--margin);
 }
 .project-image {
-    width:15em;
+    width:20em;
     border-radius: 15px;
 }
 .overlay {
